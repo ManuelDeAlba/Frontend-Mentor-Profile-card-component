@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+:root{
+    --dark-cyan: hsl(185, 75%, 39%);
+    --very-dark-desaturated-blue: hsl(229, 23%, 23%);
+    --dark-grayish-blue: hsl(227, 10%, 46%);
+
+    --dark-gray: hsl(0, 0%, 59%);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    min-height:100vh;
+    font-family: 'Kumbh Sans', sans-serif;
+    background-color: var(--dark-cyan);
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.bg-pattern-top{
+    position: absolute;
+    top: -60%;
+    left: -20%;
+    z-index: -1;
+}
+.bg-pattern-bottom{
+    position: absolute;
+    bottom: -80%;
+    right: -15%;
+    z-index: -1;
+}
+
+/* CARD */
+.card{
+    width: 360px;
+    background: #fff;
+    margin: auto;
+    border-radius: 15px;
+    padding-bottom: 20px;
+    box-shadow: -5px 5px 50px rgba(50,50,50,.5);
+}
+.card__bg{
+    background-image: url(../images/bg-pattern-card.svg);
+    width: 100%;
+    height: 140px;
+    border-radius: 15px 15px 0 0;
+}
+.card__img{
+    border-radius: 50%;
+    border: 5px solid #fff;
+    display: block;
+    margin: auto;
+    margin-top: -50px;
+}
+.card__info{
+    text-align: center;
+    margin-top: 25px;
+}
+.card__name, .card__age{
+    display: inline-block;
+}
+.card__name{
+    margin-right: 10px;
+    font-size: 18px;
+    color: var(--very-dark-desaturated-blue);
+    font-weight: 700;
+}
+.card__age{
+    font-size: 18px;
+    color: var(--dark-grayish-blue);
+}
+.card__city{
+    color: var(--dark-grayish-blue);
+    margin-top: 10px;
+    font-size: 15px;
+}
+
+.separator{
+    background: lightgray;
+    width: 100%;
+    height: 1px;
+    margin: 25px 0;
+}
+
+.card__social-media{
+    width:80%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card__social-media div{
+    width: 33%;
+    height: 50px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.card__stats{
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--very-dark-desaturated-blue);
+}
+.card__stats-name{
+    color: var(--dark-gray);
+    font-weight: 400;
+    margin-top: 10px;
+    letter-spacing: 2px;
+    font-size: 11px;
+}
+
+@media screen and (max-width: 375px){
+    .bg-pattern-top{
+        width: 150%;
+        top: -40%;
+        left: -90%;
+    }
+    .bg-pattern-bottom{
+        width: 150%;
+        bottom: -32%;
+        right: -90%;
+    }
+    .card{
+        width: 90%;
+    }
+}
